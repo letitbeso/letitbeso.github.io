@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
+
+
 <title>生日快乐</title>
 
 <style>
@@ -15,6 +17,10 @@ html,body{
 </style>
 
 </head>
+
+
+
+
 <body>
 <canvas id="canvas" style="position:absolute;width:100%;height:100%;z-index:8888"></canvas>
 <canvas style="position:absolute;width:100%;height:100%;z-index:9999" class="canvas" ></canvas>
@@ -28,7 +34,10 @@ html,body{
     </div>
   </div>
 </div>
+
 <script>
+
+
 function initVars(){
 
 	pi=Math.PI;
@@ -57,7 +66,9 @@ function initVars(){
 	frames = 0;
 }
 
+
 function rasterizePoint(x,y,z){
+
 
 	var p,d;
 	x-=playerX;
@@ -343,7 +354,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('|#countdown 3||生日|快乐|小飞侠|娜|永远|开心|#rectangle|');
+      S.UI.simulate('|#countdown 3||注意！！|今天是个|特别的日子|2022-04-18|HAPPY BIRTHDAY|祝|刘东梅女士|生日快乐|不止生日|366天|天天快乐|嘻嘻嘻|烟花祝福|看到烟花|梦想成真|❤|❤❤❤|❤|❤❤❤❤|岁岁平安|岁岁有我|快乐N*Day|(づ￣3￣)づ╭❤～|#rectangle|');
     }
 
     S.Drawing.loop(function () {
@@ -525,7 +536,7 @@ S.UI = (function () {
         default:
           S.Shape.switchShape(S.ShapeBuilder.letter(current[0] === cmd ? 'What?' : current));
       }
-    }, 3500, sequence.length);
+    }, 3000, sequence.length);
   }
 
   function checkInputWidth(e) {
@@ -845,22 +856,291 @@ S.ShapeBuilder = (function () {
 
     return { dots: dots, w: w + fx, h: h + fy };
   }
-
   function setFontSize(s) {
     shapeContext.font = 'bold ' + s + 'px ' + fontFamily;
   }
-
   function isNumber(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
   }
-
   function init() {
     fit();
     window.addEventListener('resize', fit);
   }
-
   // Init
   init();
+
+  {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
 
   return {
     imageFile: function (url, callback) {
@@ -924,8 +1204,6 @@ S.ShapeBuilder = (function () {
     }
   };
 }());
-
-
 S.Shape = (function () {
   var dots = [],
       width = 0,
@@ -1023,7 +1301,6 @@ S.Shape = (function () {
         }
       }
     },
-
     render: function () {
       for (var d = 0; d < dots.length; d++) {
         dots[d].render();
@@ -1031,12 +1308,7 @@ S.Shape = (function () {
     }
   }
 }());
-
-
 S.init();
-
 </script>
-
 </body>
-
 </html>
